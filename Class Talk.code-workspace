@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "Class-Talk",
+			"path": "Class-Talk"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

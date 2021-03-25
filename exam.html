@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title> 
+        Exam
+    </title> 
+</head> 
+  
+<body> 
+    Enter a number or String: <input type="text" id = "year"/> 
+    <select id="type" name="cars">
+        <option value="1">Factorial</option>
+        <option value="2">Fabonacci</option>
+        <option value="3">Leap Year</option>
+        <option value="4">Alphabetically Order</option>
+      </select>
+    <input type="button" id="button" onClick="check()"
+            value="Calculate"> 
+      <br>
+      <br><br>
+      Result: <input type="text" id = "GFG"/> 
+   
+      
+    <!-- JavaScript code to check given year is 
+        leap year or not -->
+    <script> 
+        function check() { 
+            var i;
+            var fact=1;
+            var n1 = 0, n2 = 1, nextTerm;
+            var value= document.getElementById("year").value; 
+            var type= document.getElementById("type").value;
+            if(type==1){
+                for(i=1;i<=value;i++){
+                    fact=fact*i;
+                }
+                document.getElementById("GFG").value=fact;
+            }
+            if(type==2){
+                    var f1=0;
+                    var f2=1;
+                    var a=[];
+                    var  j=2;
+                    a[0]=f1;
+                    a[1]=f2;
+                    var i,f3;
+                    for(i=2; i<value; i++)
+                    {
+                        f3=f1+f2;
+                        a[j]=f3;
+                        j++;
+                        f1=f2;
+                        f2=f3;
+                    }
+                    document.getElementById("GFG").value=a;
+            }
+            if(type==3){
+                  if(((value % 4 == 0) && (value % 100 != 0)) || (value % 400 == 0))
+                  {
+                    document.getElementById("GFG").value="Its a leap year";
+                  }
+                  else 
+                  {
+                    document.getElementById("GFG").value="Its not a leap year";
+                  }
+                
+              }
+              if(type==4){
+                var sortAlphabets = function (text) {
+                    return text.split('').sort().join('');
+                };
+                document.getElementById("GFG").value=sortAlphabets(value);
+              }
+           
+        } 
+    </script> 
+</body> 
+  
+</html>             
